@@ -1,2 +1,11 @@
-BOOTMAGIC_ENABLE = yes
-TAP_DANCE_ENABLE = yes
+BOOTLOADER          = atmel-dfu
+MOUSEKEY_ENABLE     = no     # Mouse keys
+RGB_MATRIX_ENABLE   = no
+LTO_ENABLE          = yes
+COMBO_ENABLE 		= yes
+COMMAND_ENABLE      = no
+AUTO_SHIFT_ENABLE   = no
+CAPS_WORD_ENABLE    = yes
+SRC += oneshot.c
+SRC += swapper.c
+SRC += layer_lock.c
