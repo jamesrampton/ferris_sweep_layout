@@ -43,7 +43,7 @@ enum combo_events {
    // punctuation combos
    MINS_COMBO, // C+D
    USCR_COMBO, // H+,,
-   SCLN_COMBO, // .+/
+   SCLN_COMBO, // B+V
    // braces
    LCBR_COMBO, // F+S
    LPRN_COMBO, // P+T
@@ -58,7 +58,7 @@ enum combo_events {
 // punctuation combos
  const uint16_t PROGMEM mins_combo[] = {KC_C, KC_D, COMBO_END};
  const uint16_t PROGMEM uscr_combo[] = {KC_H, KC_COMM, COMBO_END};
- const uint16_t PROGMEM scln_combo[] = {KC_DOT, KC_SLSH, COMBO_END};
+ const uint16_t PROGMEM scln_combo[] = {KC_B, KC_V, COMBO_END};
  // braces - vertical combos
  const uint16_t PROGMEM lcbr_combo[] = {KC_F, KC_S, COMBO_END};
  const uint16_t PROGMEM lprn_combo[] = {KC_P, KC_T, COMBO_END};
