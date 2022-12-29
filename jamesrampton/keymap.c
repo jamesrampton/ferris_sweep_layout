@@ -10,9 +10,9 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Colemak Mod-DH layout
   [_CDH] = LAYOUT_split_3x5_2(
-                              KC_Q, KC_W, KC_F, KC_P, KC_B,                KC_J, KC_L, KC_U,    KC_Y,   KC_QUOT,
-                              KC_A, KC_R, KC_S, KC_T, KC_G,                KC_M, KC_N, KC_E,    KC_I,   KC_O,
-                              KC_Z, KC_X, KC_C, KC_D, KC_V,                KC_K, KC_H, KC_COMM, KC_DOT, KC_SLSH,
+                              KC_Q, KC_Y,    KC_O,   KC_U, KC_X,           KC_G, KC_C, KC_M, KC_R, KC_Z,
+                              KC_H, KC_I,    KC_E,   KC_A, KC_SLSH,        KC_D, KC_S, KC_T, KC_N, KC_B,
+                              KC_J, KC_COMM, KC_DOT, KC_K, KC_QUOT,        KC_W, KC_F, KC_L, KC_P, KC_V,
                                                  NAV, OSM(MOD_LSFT),       KC_SPC, NUM
                               ),
 
@@ -25,7 +25,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                               ),
 
   [_NAV] = LAYOUT_split_3x5_2(
-                              SW_APP,  KC_NO,   TAB_L,  TAB_R,   KC_TAB,      KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_BSPC,
+                              SW_APP,  KC_MEH,   TAB_L,  TAB_R,   KC_TAB,      KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_BSPC,
                               OS_CTRL, OS_ALT,  OS_CMD, OS_SHFT, M_SAVE,      KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_TAB,
                               M_UNDO,  M_CUT,   M_COPY,  LLOCK,  M_PSTE,      WS_L,    W_L,     W_R,     WS_R,    KC_DEL,
                                                         KC_TRNS, KC_TRNS,     LAU, KC_TRNS
