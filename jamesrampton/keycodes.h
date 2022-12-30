@@ -28,14 +28,17 @@
 #define M_SAVE G(KC_S)
 #define TAB_L G(S(KC_LBRC))
 #define TAB_R G(S(KC_RBRC))
-#define WS_L A(S(KC_LEFT))  // select word left
-#define WS_R A(S(KC_RIGHT)) // select word right
-#define W_L A(KC_LEFT)      // move word left
-#define W_R A(KC_RIGHT)     // move word right
+#define BR_BCK G(KC_LBRC)
+#define BR_FWD G(KC_RBRC)
+// #define WS_L A(S(KC_LEFT))  // select word left
+// #define WS_R A(S(KC_RIGHT)) // select word right
+// #define W_L A(KC_LEFT)      // move word left
+// #define W_R A(KC_RIGHT)     // move word right
+
 #define LAU LGUI(KC_SPC)    // launcher (cmd+spc)
 // awkward symbols to type
-#define GBPD LALT(KC_3) // UK pound sign
-#define PMIN LALT(KC_PLUS) // plus/minus symbol
+#define GBPD RALT(KC_3) // UK pound sign
+#define PMIN RALT(KC_PLUS) // plus/minus symbol
 
 enum layers {
     _CDH,
