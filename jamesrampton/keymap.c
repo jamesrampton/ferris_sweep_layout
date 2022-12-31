@@ -45,12 +45,12 @@ enum combo_events {
    USCR_COMBO, // H+,,
    SCLN_COMBO, // B+V
    // braces
-   LCBR_COMBO, // F+S
-   LPRN_COMBO, // P+T
-   LBRC_COMBO, // B+G
-   RCBR_COMBO, // U+E
-   RPRN_COMBO, // L+N
-   RBRC_COMBO, // J+M
+   LCBR_COMBO, // X+/
+   LPRN_COMBO, // U+A
+   LBRC_COMBO, // O+E
+   RCBR_COMBO, // G+D
+   RPRN_COMBO, // C+S
+   RBRC_COMBO, // M+T
    // Other combos...
    COMBO_LENGTH
  };
@@ -60,12 +60,12 @@ enum combo_events {
  const uint16_t PROGMEM uscr_combo[] = {KC_H, KC_COMM, COMBO_END};
  const uint16_t PROGMEM scln_combo[] = {KC_B, KC_V, COMBO_END};
  // braces - vertical combos
- const uint16_t PROGMEM lcbr_combo[] = {KC_F, KC_S, COMBO_END};
- const uint16_t PROGMEM lprn_combo[] = {KC_P, KC_T, COMBO_END};
- const uint16_t PROGMEM lbrc_combo[] = {KC_B, KC_G, COMBO_END};
- const uint16_t PROGMEM rbrc_combo[] = {KC_J, KC_M, COMBO_END};
- const uint16_t PROGMEM rprn_combo[] = {KC_L, KC_N, COMBO_END};
- const uint16_t PROGMEM rcbr_combo[] = {KC_U, KC_E, COMBO_END};
+ const uint16_t PROGMEM lcbr_combo[] = {KC_X, KC_SLSH, COMBO_END};
+ const uint16_t PROGMEM lprn_combo[] = {KC_U, KC_A, COMBO_END};
+ const uint16_t PROGMEM lbrc_combo[] = {KC_O, KC_E, COMBO_END};
+ const uint16_t PROGMEM rbrc_combo[] = {KC_M, KC_T, COMBO_END};
+ const uint16_t PROGMEM rprn_combo[] = {KC_C, KC_S, COMBO_END};
+ const uint16_t PROGMEM rcbr_combo[] = {KC_G, KC_D, COMBO_END};
 
  combo_t key_combos[] = {
    [MINS_COMBO] = COMBO(mins_combo, KC_MINS),
