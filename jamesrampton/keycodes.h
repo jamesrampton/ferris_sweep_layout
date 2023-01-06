@@ -16,8 +16,8 @@
 /* #define HOME_O RCTL_T(KC_O) */
 
 // Layer keys
-#define NUM LT(_NUM, KC_ENT)
-#define NAV LT(_NAV, KC_ESC)
+#define NUM LT(_NUM, KC_DOT)
+#define NAV LT(_NAV, KC_COMM)
 // FUN is both together
 
 // shortcuts
@@ -36,6 +36,9 @@
 // #define W_R A(KC_RIGHT)     // move word right
 
 #define LAU LGUI(KC_SPC)    // launcher (cmd+spc)
+#define CTL_C LCTL(KC_C)
+#define CTL_A LCTL(KC_A)
+#define CMD_ENT LGUI(KC_ENT)
 // awkward symbols to type
 #define GBPD RALT(KC_3) // UK pound sign
 #define PMIN RALT(KC_PLUS) // plus/minus symbol
