@@ -20,7 +20,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_NUM] = LAYOUT_split_3x5_2(
                            KC_LBRC,  KC_7, KC_8, KC_9, KC_RBRC,        KC_NO,   GBPD,    PMIN,    KC_NO,   KC_BSPC,
                            KC_SCLN,  KC_4, KC_5, KC_6, KC_EQL,         KC_NO,   OS_SHFT, OS_CMD,  OS_ALT,  OS_CTRL,
-                           KC_GRV,   KC_1, KC_2, KC_3, KC_MINS,        KC_NO,   LLOCK,   KC_NO,   KC_BSLS, KC_SLSH,
+                           KC_GRV,   KC_1, KC_2, KC_3, KC_MINS,        KC_NO,   LLOCK,   KC_NO,   KC_BSLS, KC_ENT,
                                                  KC_DOT,  KC_0,        KC_SPC,  KC_TRNS
                               ),
 
@@ -59,8 +59,8 @@ enum combo_events {
  };
  uint16_t COMBO_LEN = COMBO_LENGTH;
 // punctuation combos
- const uint16_t PROGMEM mins_combo[] = {KC_DOT, KC_K, COMBO_END};
- const uint16_t PROGMEM uscr_combo[] = {KC_F, KC_L, COMBO_END};
+ const uint16_t PROGMEM mins_combo[] = {KC_K, KC_QUOT, COMBO_END};
+ const uint16_t PROGMEM uscr_combo[] = {KC_W, KC_F, COMBO_END};
  const uint16_t PROGMEM scln_combo[] = {KC_B, KC_V, COMBO_END};
  // braces combos
  const uint16_t PROGMEM lprn_combo[] = {KC_O, KC_U, COMBO_END};
