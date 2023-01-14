@@ -12,7 +12,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_CDH] = LAYOUT_split_3x5_2(
                               KC_Q, KC_Y,    KC_O,   KC_U, KC_X,           KC_G, KC_C, KC_M, KC_R, KC_Z,
                               KC_H, KC_I,    KC_E,   KC_A, KC_SLSH,        KC_D, KC_S, KC_T, KC_N, KC_B,
-                              KC_J, KC_LCTL, KC_MEH, KC_K, KC_QUOT,        KC_W, KC_F, KC_L, KC_P, KC_V,
+                              KC_J, KC_COMM, KC_DOT, KC_K, KC_QUOT,        KC_W, KC_F, KC_L, KC_P, KC_V,
                                                  NAV, OSM(MOD_LSFT),       KC_SPC, NUM
                               ),
 
@@ -26,14 +26,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_NAV] = LAYOUT_split_3x5_2(
                               SW_APP,  KC_ESC,   TAB_L,  TAB_R,   KC_TAB,     KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_BSPC,
-                              OS_CTRL, OS_ALT,  OS_CMD, OS_SHFT, M_SAVE,      KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,
-                              M_UNDO,  M_CUT,   M_COPY,  LLOCK,  M_PSTE,      KC_NO,   BR_BCK,  BR_FWD,  KC_NO,   KC_DEL,
+                              OS_CTRL, OS_ALT,  OS_CMD, OS_SHFT, M_SAVE,      KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_MEH,
+                              M_UNDO,  M_CUT,   M_COPY,  LLOCK,  M_PSTE,      KC_NO,   BR_BCK,  BR_FWD,  KC_NO,   KC_ENT,
                                                         KC_TRNS, KC_TRNS,     LAU, KC_TRNS
                               ),
 
   [_FUN] = LAYOUT_split_3x5_2(
-                              KC_TRNS,   KC_VOLD,  KC_MUTE,  KC_VOLU,   KC_CAPS,      KC_F12,  KC_F7, KC_F8, KC_F9, CTL_C,
-                              OS_CTRL, OS_ALT,   OS_CMD,   OS_SHFT,   KC_NO,        KC_F11,  KC_F4, KC_F5, KC_F6, CTL_A,
+                              KC_TRNS,   KC_VOLD,  KC_MUTE,  KC_VOLU,   KC_CAPS,      KC_F12,  KC_F7, KC_F8, KC_F9, CMD_DOT,
+                              OS_CTRL, OS_ALT,   OS_CMD,   OS_SHFT,   KC_NO,        KC_F11,  KC_F4, KC_F5, KC_F6, CMD_COMM,
                               KC_NO,   KC_MPRV,  KC_MPLY,  KC_MNXT,   KC_NO,        KC_F10,  KC_F1, KC_F2, KC_F3, CMD_ENT,
                                                            KC_TRNS,   KC_TRNS,      KC_SPC, KC_TRNS
                               )
@@ -41,16 +41,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 enum combo_events {
    // punctuation combos
-   MINS_COMBO, // C+D
-   USCR_COMBO, // H+,,
-   SCLN_COMBO, // B+V
+   MINS_COMBO,
+   USCR_COMBO,
+   SCLN_COMBO,
    // braces
-   LCBR_COMBO, // X+/
-   LPRN_COMBO, // U+A
-   LBRC_COMBO, // O+E
-   RCBR_COMBO, // G+D
-   RPRN_COMBO, // C+S
-   RBRC_COMBO, // M+T
+   LPRN_COMBO,
+   LCBR_COMBO,
+   LBRC_COMBO,
+   RPRN_COMBO,
+   RCBR_COMBO,
+   RBRC_COMBO,
+   // modifier combos
+   CTL_C_COMBO,
+   CTL_B_COMBO,
    // Other combos...
    COMBO_LENGTH
  };
@@ -59,24 +62,29 @@ enum combo_events {
  const uint16_t PROGMEM mins_combo[] = {KC_DOT, KC_K, COMBO_END};
  const uint16_t PROGMEM uscr_combo[] = {KC_F, KC_L, COMBO_END};
  const uint16_t PROGMEM scln_combo[] = {KC_B, KC_V, COMBO_END};
- // braces - vertical combos
- const uint16_t PROGMEM lcbr_combo[] = {KC_X, KC_SLSH, COMBO_END};
- const uint16_t PROGMEM lprn_combo[] = {KC_U, KC_A, COMBO_END};
- const uint16_t PROGMEM lbrc_combo[] = {KC_O, KC_E, COMBO_END};
- const uint16_t PROGMEM rbrc_combo[] = {KC_M, KC_T, COMBO_END};
- const uint16_t PROGMEM rprn_combo[] = {KC_C, KC_S, COMBO_END};
- const uint16_t PROGMEM rcbr_combo[] = {KC_G, KC_D, COMBO_END};
+ // braces combos
+ const uint16_t PROGMEM lprn_combo[] = {KC_O, KC_U, COMBO_END};
+ const uint16_t PROGMEM lcbr_combo[] = {KC_E, KC_A, COMBO_END};
+ const uint16_t PROGMEM lbrc_combo[] = {KC_DOT, KC_K, COMBO_END};
+ const uint16_t PROGMEM rprn_combo[] = {KC_C, KC_M, COMBO_END};
+ const uint16_t PROGMEM rcbr_combo[] = {KC_S, KC_T, COMBO_END};
+ const uint16_t PROGMEM rbrc_combo[] = {KC_F, KC_L, COMBO_END};
+ // modifier combos
+ const uint16_t PROGMEM ctl_c_combo[] = {KC_S, KC_T, KC_N, COMBO_END};
+ const uint16_t PROGMEM ctl_b_combo[] = {KC_I, KC_E, KC_A, COMBO_END};
 
  combo_t key_combos[] = {
    [MINS_COMBO] = COMBO(mins_combo, KC_MINS),
    [USCR_COMBO] = COMBO(uscr_combo, LSFT(KC_MINS)),
    [SCLN_COMBO] = COMBO(scln_combo, KC_SCLN),
-   [LCBR_COMBO] = COMBO(lcbr_combo, KC_LCBR),
    [LPRN_COMBO] = COMBO(lprn_combo, KC_LPRN),
+   [LCBR_COMBO] = COMBO(lcbr_combo, KC_LCBR),
    [LBRC_COMBO] = COMBO(lbrc_combo, KC_LBRC),
-   [RCBR_COMBO] = COMBO(rcbr_combo, KC_RCBR),
    [RPRN_COMBO] = COMBO(rprn_combo, KC_RPRN),
+   [RCBR_COMBO] = COMBO(rcbr_combo, KC_RCBR),
    [RBRC_COMBO] = COMBO(rbrc_combo, KC_RBRC),
+   [CTL_C_COMBO] = COMBO(ctl_c_combo, LCTL(KC_C)),
+   [CTL_B_COMBO] = COMBO(ctl_b_combo, LCTL(KC_B)),
  };
 
 // caps word setup

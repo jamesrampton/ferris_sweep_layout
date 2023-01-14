@@ -36,9 +36,9 @@
 // #define W_R A(KC_RIGHT)     // move word right
 
 #define LAU LGUI(KC_SPC)    // launcher (cmd+spc)
-#define CTL_C LCTL(KC_C)
-#define CTL_A LCTL(KC_A)
 #define CMD_ENT LGUI(KC_ENT)
+#define CMD_DOT LGUI(KC_DOT)
+#define CMD_COMM LGUI(KC_COMM)
 // awkward symbols to type
 #define GBPD RALT(KC_3) // UK pound sign
 #define PMIN RALT(KC_PLUS) // plus/minus symbol
