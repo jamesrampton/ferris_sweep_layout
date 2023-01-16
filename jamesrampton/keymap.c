@@ -54,6 +54,8 @@ enum combo_events {
    // modifier combos
    CTL_C_COMBO,
    CTL_B_COMBO,
+   CTL_D_COMBO,
+   CTL_R_COMBO,
    // Other combos...
    COMBO_LENGTH
  };
@@ -72,6 +74,8 @@ enum combo_events {
  // modifier combos
  const uint16_t PROGMEM ctl_c_combo[] = {KC_S, KC_T, KC_N, COMBO_END};
  const uint16_t PROGMEM ctl_b_combo[] = {KC_I, KC_E, KC_A, COMBO_END};
+ const uint16_t PROGMEM ctl_d_combo[] = {KC_C, KC_M, KC_R, COMBO_END};
+ const uint16_t PROGMEM ctl_r_combo[] = {KC_F, KC_L, KC_P, COMBO_END};
 
  combo_t key_combos[] = {
    [MINS_COMBO] = COMBO(mins_combo, KC_MINS),
@@ -85,6 +89,8 @@ enum combo_events {
    [RBRC_COMBO] = COMBO(rbrc_combo, KC_RBRC),
    [CTL_C_COMBO] = COMBO(ctl_c_combo, LCTL(KC_C)),
    [CTL_B_COMBO] = COMBO(ctl_b_combo, LCTL(KC_B)),
+   [CTL_D_COMBO] = COMBO(ctl_d_combo, LCTL(KC_D)),
+   [CTL_R_COMBO] = COMBO(ctl_r_combo, LCTL(KC_R)),
  };
 
 // caps word setup
