@@ -10,8 +10,8 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Colemak Mod-DH layout
   [_CDH] = LAYOUT_split_3x5_2(
-                              KC_Q, KC_Y,    KC_O,   KC_U, KC_X,           KC_G, KC_C, KC_M, KC_R, KC_Z,
-                              KC_H, KC_I,    KC_E,   KC_A, KC_SLSH,        KC_D, KC_S, KC_T, KC_N, KC_B,
+                              KC_Q, KC_Y,    KC_O,   KC_U, KC_X,           KC_G, KC_C, KC_M, KC_N, KC_Z,
+                              KC_H, KC_I,    KC_E,   KC_A, KC_SLSH,        KC_D, KC_S, KC_T, KC_R, KC_B,
                               KC_J, KC_COMM, KC_DOT, KC_K, KC_QUOT,        KC_W, KC_F, KC_L, KC_P, KC_V,
                                                  NAV, OSM(MOD_LSFT),       KC_SPC, NUM
                               ),
@@ -72,9 +72,9 @@ enum combo_events {
  const uint16_t PROGMEM rcbr_combo[] = {KC_S, KC_T, COMBO_END};
  const uint16_t PROGMEM rbrc_combo[] = {KC_F, KC_L, COMBO_END};
  // modifier combos
- const uint16_t PROGMEM ctl_c_combo[] = {KC_S, KC_T, KC_N, COMBO_END};
+ const uint16_t PROGMEM ctl_c_combo[] = {KC_S, KC_T, KC_R, COMBO_END};
  const uint16_t PROGMEM ctl_b_combo[] = {KC_I, KC_E, KC_A, COMBO_END};
- const uint16_t PROGMEM ctl_d_combo[] = {KC_C, KC_M, KC_R, COMBO_END};
+ const uint16_t PROGMEM ctl_d_combo[] = {KC_C, KC_M, KC_N, COMBO_END};
  const uint16_t PROGMEM ctl_r_combo[] = {KC_F, KC_L, KC_P, COMBO_END};
 
  combo_t key_combos[] = {
