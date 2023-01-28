@@ -61,16 +61,16 @@ enum combo_events {
  };
  uint16_t COMBO_LEN = COMBO_LENGTH;
 // punctuation combos
- const uint16_t PROGMEM mins_combo[] = {KC_K, KC_QUOT, COMBO_END};
- const uint16_t PROGMEM uscr_combo[] = {KC_W, KC_F, COMBO_END};
+ const uint16_t PROGMEM mins_combo[] = {KC_DOT, KC_K, COMBO_END};
+ const uint16_t PROGMEM uscr_combo[] = {KC_F, KC_L, COMBO_END};
  const uint16_t PROGMEM scln_combo[] = {KC_B, KC_V, COMBO_END};
  // braces combos
- const uint16_t PROGMEM lprn_combo[] = {KC_O, KC_U, COMBO_END};
- const uint16_t PROGMEM lcbr_combo[] = {KC_E, KC_A, COMBO_END};
- const uint16_t PROGMEM lbrc_combo[] = {KC_DOT, KC_K, COMBO_END};
- const uint16_t PROGMEM rprn_combo[] = {KC_C, KC_M, COMBO_END};
- const uint16_t PROGMEM rcbr_combo[] = {KC_S, KC_T, COMBO_END};
- const uint16_t PROGMEM rbrc_combo[] = {KC_F, KC_L, COMBO_END};
+ const uint16_t PROGMEM lprn_combo[] = {KC_U, KC_X, COMBO_END};
+ const uint16_t PROGMEM lcbr_combo[] = {KC_A, KC_SLSH, COMBO_END};
+ const uint16_t PROGMEM lbrc_combo[] = {KC_K, KC_QUOT, COMBO_END};
+ const uint16_t PROGMEM rprn_combo[] = {KC_G, KC_C, COMBO_END};
+ const uint16_t PROGMEM rcbr_combo[] = {KC_D, KC_S, COMBO_END};
+ const uint16_t PROGMEM rbrc_combo[] = {KC_W, KC_F, COMBO_END};
  // modifier combos
  const uint16_t PROGMEM ctl_c_combo[] = {KC_S, KC_T, KC_R, COMBO_END};
  const uint16_t PROGMEM ctl_b_combo[] = {KC_I, KC_E, KC_A, COMBO_END};
