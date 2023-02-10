@@ -16,8 +16,8 @@
 /* #define HOME_O RCTL_T(KC_O) */
 
 // Layer keys
-#define NUM LT(_NUM, KC_BSPC)
-#define NAV LT(_NAV, KC_DEL)
+#define NUM MO(_NUM)
+#define NAV MO(_NAV)
 // FUN is both together
 
 // shortcuts
