@@ -1,4 +1,6 @@
-BOOTLOADER          = atmel-dfu
+CONVERT_TO          = promicro_rp2040
+PIN_COMPATIBLE      = promicro
+BOOTLOADER          = rp2040
 MOUSEKEY_ENABLE     = no     # Mouse keys
 RGB_MATRIX_ENABLE   = no
 LTO_ENABLE          = yes
