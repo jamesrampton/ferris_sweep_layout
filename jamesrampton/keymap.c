@@ -10,32 +10,32 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Colemak Mod-DH layout
   [_CDH] = LAYOUT_split_3x5_2(
-                              KC_Q, KC_Y,    KC_O,   KC_U, KC_X,           KC_G, KC_C, KC_M, KC_N, KC_Z,
-                              KC_H, KC_I,    KC_E,   KC_A, KC_SLSH,        KC_D, KC_S, KC_T, KC_R, KC_B,
-                              KC_J, KC_COMM, KC_DOT, KC_K, KC_QUOT,        KC_W, KC_F, KC_L, KC_P, KC_V,
-                                                 NAV, OSM(MOD_LSFT),       KC_SPC, NUM
+      KC_G, KC_C, KC_M, KC_N, KC_Z,            KC_X, KC_U, KC_O, KC_Y, KC_Q,
+      KC_D, KC_S, KC_T, KC_R, KC_B,        KC_SLSH, KC_A, KC_E, KC_I, KC_H, 
+      KC_W, KC_F, KC_L, KC_P, KC_V,        KC_QUOT, KC_K, KC_DOT, KC_COMM, KC_J,
+                       KC_SPC, NUM,        OSM(MOD_LSFT), NAV
                               ),
 
 
   [_NUM] = LAYOUT_split_3x5_2(
-                           KC_LBRC,  KC_7, KC_8, KC_9, KC_RBRC,        KC_NO,   GBPD,    PMIN,    KC_NO,   KC_BSPC,
-                           KC_SCLN,  KC_4, KC_5, KC_6, KC_EQL,         KC_NO,   OS_SHFT, OS_CMD,  OS_ALT,  OS_CTRL,
-                           KC_GRV,   KC_1, KC_2, KC_3, KC_MINS,        KC_NO,   LLOCK,   KC_NO,   KC_BSLS, KC_ENT,
-                                                 KC_DOT,  KC_0,        KC_SPC,  KC_TRNS
+    KC_NO,   GBPD,    PMIN,    KC_NO,   KC_BSPC,      KC_RBRC, KC_9, KC_8,KC_7,  KC_LBRC,        
+    KC_NO,   OS_SHFT, OS_CMD,  OS_ALT,  OS_CTRL,      KC_EQL,  KC_6, KC_5,KC_4,  KC_SCLN,        
+    KC_NO,   LLOCK,   KC_NO,   KC_BSLS, KC_ENT,       KC_MINS, KC_3, KC_2,KC_1,  KC_GRV,         
+    KC_SPC,  KC_TRNS,                                 KC_0, KC_DOT        
                               ),
 
   [_NAV] = LAYOUT_split_3x5_2(
-                              SW_APP,  KC_ESC,   TAB_L,  TAB_R,   KC_TAB,     KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_BSPC,
-                              OS_CTRL, OS_ALT,  OS_CMD, OS_SHFT, M_SAVE,      KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_MEH,
-                              M_UNDO,  M_CUT,   M_COPY,  LLOCK,  M_PSTE,      KC_NO,   BR_BCK,  BR_FWD,  KC_NO,   KC_ENT,
-                                                        KC_TRNS, KC_TRNS,     LAU, KC_TRNS
+                          KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_BSPC,        KC_TAB,  TAB_R,  TAB_L, KC_ESC, SW_APP,       
+                          KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_MEH,        M_SAVE,  OS_SHFT, OS_CMD, OS_ALT, OS_CTRL,      
+                          KC_NO,   BR_BCK,  BR_FWD,  KC_NO,   KC_ENT,        M_PSTE,   LLOCK, M_COPY, M_CUT,  M_UNDO,       
+                          LAU, KC_TRNS,                                                               KC_TRNS, KC_TRNS     
                               ),
 
   [_FUN] = LAYOUT_split_3x5_2(
-                              KC_TRNS,   KC_VOLD,  KC_MUTE,  KC_VOLU,   KC_CAPS,      KC_F12,  KC_F7, KC_F8, KC_F9, CMD_DOT,
-                              OS_CTRL, KC_MPRV,   KC_MPLY,  KC_MNXT,   KC_NO,        KC_F11,  KC_F4, KC_F5, KC_F6, CMD_COMM,
-                              KC_NO,   KC_BRID,  KC_SLEP,  KC_BRIU,   KC_NO,        KC_F10,  KC_F1, KC_F2, KC_F3, CMD_ENT,
-                                                           KC_TRNS,   KC_TRNS,      KC_SPC, KC_TRNS
+                KC_F12,  KC_F7, KC_F8, KC_F9, CMD_DOT,  KC_TRNS,     KC_CAPS, KC_VOLU, KC_MUTE,  KC_VOLD,      
+                KC_F11,  KC_F4, KC_F5, KC_F6, CMD_COMM, OS_CTRL,     KC_NO,   KC_MNXT, KC_MPLY,  KC_MPRV,        
+                KC_F10,  KC_F1, KC_F2, KC_F3, CMD_ENT,  KC_NO,       KC_NO,   KC_BRIU, KC_SLEP,  KC_BRID,          
+                KC_SPC,  KC_TRNS,                                                      KC_TRNS,  KC_TRNS          
                               )
 };
 
