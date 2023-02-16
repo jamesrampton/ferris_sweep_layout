@@ -14,10 +14,11 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-
 #pragma once
 // HRM configuration
 // Configure the global tapping term (default: 200ms)
+#define EE_HANDS
+
 #define TAPPING_TERM 250
 
 // Prevent normal rollover on alphas from accidentally triggering mods.
