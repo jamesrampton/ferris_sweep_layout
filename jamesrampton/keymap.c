@@ -32,66 +32,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                               ),
 
   [_FUN] = LAYOUT_split_3x5_2(
-                              KC_TRNS,   KC_VOLD,  KC_MUTE,  KC_VOLU,   KC_CAPS,      KC_F12,  KC_F7, KC_F8, KC_F9, CMD_DOT,
-                              OS_CTRL, KC_MPRV,   KC_MPLY,  KC_MNXT,   KC_NO,        KC_F11,  KC_F4, KC_F5, KC_F6, CMD_COMM,
-                              KC_NO,   KC_F14,  KC_SLEP,  KC_F15,   KC_NO,        KC_F10,  KC_F1, KC_F2, KC_F3, CMD_ENT,
-                                                           KC_TRNS,   KC_TRNS,      KC_SPC, KC_TRNS
+                              KC_TRNS, KC_VOLD, KC_MUTE, KC_VOLU, KC_LPRN,    KC_RPRN, KC_F7,      KC_F8,      KC_F9,         KC_BSPC,
+                              OS_CTRL, OS_ALT,  OS_CMD,  OS_SHFT, KC_LCBR,    KC_RCBR, LCTL(KC_C), LCTL(KC_D), LCTL(KC_R),    LCTL(KC_B),
+                              KC_COLN, KC_F14,  KC_SLEP, KC_F15,  KC_LBRC,    KC_RBRC, KC_F1,      KC_MINS,    LSFT(KC_MINS), KC_ENT,
+                                                         KC_TRNS, KC_TRNS,    KC_SPC,  KC_TRNS
                               )
 };
-
-enum combo_events {
-   // punctuation combos
-   MINS_COMBO,
-   USCR_COMBO,
-   COLN_COMBO,
-   // braces
-   LPRN_COMBO,
-   LCBR_COMBO,
-   LBRC_COMBO,
-   RPRN_COMBO,
-   RCBR_COMBO,
-   RBRC_COMBO,
-   // modifier combos
-   CTL_C_COMBO,
-   CTL_B_COMBO,
-   CTL_D_COMBO,
-   CTL_R_COMBO,
-   // Other combos...
-   COMBO_LENGTH
- };
- uint16_t COMBO_LEN = COMBO_LENGTH;
-// punctuation combos
- const uint16_t PROGMEM mins_combo[] = {KC_DOT, KC_K, COMBO_END};
- const uint16_t PROGMEM uscr_combo[] = {KC_F, KC_L, COMBO_END};
- const uint16_t PROGMEM coln_combo[] = {KC_B, KC_V, COMBO_END};
- // braces combos
- const uint16_t PROGMEM lprn_combo[] = {KC_U, KC_X, COMBO_END};
- const uint16_t PROGMEM lcbr_combo[] = {KC_A, KC_SLSH, COMBO_END};
- const uint16_t PROGMEM lbrc_combo[] = {KC_K, KC_QUOT, COMBO_END};
- const uint16_t PROGMEM rprn_combo[] = {KC_G, KC_C, COMBO_END};
- const uint16_t PROGMEM rcbr_combo[] = {KC_D, KC_S, COMBO_END};
- const uint16_t PROGMEM rbrc_combo[] = {KC_W, KC_F, COMBO_END};
- // modifier combos
- const uint16_t PROGMEM ctl_c_combo[] = {KC_S, KC_T, KC_R, COMBO_END};
- const uint16_t PROGMEM ctl_b_combo[] = {KC_I, KC_E, KC_A, COMBO_END};
- const uint16_t PROGMEM ctl_d_combo[] = {KC_C, KC_M, KC_N, COMBO_END};
- const uint16_t PROGMEM ctl_r_combo[] = {KC_F, KC_L, KC_P, COMBO_END};
-
- combo_t key_combos[] = {
-   [MINS_COMBO] = COMBO(mins_combo, KC_MINS),
-   [USCR_COMBO] = COMBO(uscr_combo, LSFT(KC_MINS)),
-   [COLN_COMBO] = COMBO(coln_combo, KC_COLN),
-   [LPRN_COMBO] = COMBO(lprn_combo, KC_LPRN),
-   [LCBR_COMBO] = COMBO(lcbr_combo, KC_LCBR),
-   [LBRC_COMBO] = COMBO(lbrc_combo, KC_LBRC),
-   [RPRN_COMBO] = COMBO(rprn_combo, KC_RPRN),
-   [RCBR_COMBO] = COMBO(rcbr_combo, KC_RCBR),
-   [RBRC_COMBO] = COMBO(rbrc_combo, KC_RBRC),
-   [CTL_C_COMBO] = COMBO(ctl_c_combo, LCTL(KC_C)),
-   [CTL_B_COMBO] = COMBO(ctl_b_combo, LCTL(KC_B)),
-   [CTL_D_COMBO] = COMBO(ctl_d_combo, LCTL(KC_D)),
-   [CTL_R_COMBO] = COMBO(ctl_r_combo, LCTL(KC_R)),
- };
 
 // caps word setup
 bool caps_word_press_user(uint16_t keycode) {
