@@ -18,6 +18,7 @@
 // Layer keys
 #define NUM MO(_NUM)
 #define NAV MO(_NAV)
+#define FUN MO(_FUN)
 // FUN is both together
 
 // shortcuts
