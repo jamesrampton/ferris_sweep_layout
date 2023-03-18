@@ -18,17 +18,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
   [_NUM] = LAYOUT_split_3x5_2(
-                              KC_LT,   KC_7, KC_8, KC_9, KC_GT,               KC_NO,   GBPD,    PMIN,    KC_NO,   KC_BSPC,
-                              KC_SCLN, KC_4, KC_5, KC_6, KC_EQL,              KC_NO,   OS_SHFT, OS_CMD,  OS_ALT,  OS_CTRL,
-                              KC_GRV,  KC_1, KC_2, KC_3, KC_MINS,             KC_NO,   LLOCK,   KC_DEL,  KC_BSLS, KC_ENT,
-                                                   FUN,  KC_0,                KC_SPC,  KC_TRNS
+                              KC_LT,   KC_7, KC_8, KC_9,    KC_GT,            KC_NO,   GBPD,    PMIN,    KC_NO,   KC_BSPC,
+                              KC_SCLN, KC_4, KC_5, KC_6,    KC_EQL,           KC_NO,   OS_SHFT, OS_CMD,  OS_ALT,  OS_CTRL,
+                              KC_GRV,  KC_1, KC_2, KC_3,    KC_MINS,          KC_NO,   LLOCK,   KC_DEL,  KC_BSLS, KC_ENT,
+                                                   KC_TRNS, KC_0,             KC_SPC,  KC_TRNS
                               ),
 
   [_NAV] = LAYOUT_split_3x5_2(
                               SW_APP,  KC_ESC,  TAB_L,  TAB_R,   KC_TAB,      KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_BSPC,
                               OS_CTRL, OS_ALT,  OS_CMD, OS_SHFT, M_SAVE,      KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_MEH,
                               M_UNDO,  M_CUT,   M_COPY, LLOCK,   M_PSTE,      KC_NO,   BR_BCK,  BR_FWD,  KC_NO,   KC_ENT,
-                                                        KC_TRNS, KC_TRNS,     LAU, FUN
+                                                        KC_TRNS, KC_TRNS,     LAU,     KC_TRNS
                               ),
 
   [_FUN] = LAYOUT_split_3x5_2(
@@ -124,6 +124,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
   return true;
 }
 
-// layer_state_t layer_state_set_user(layer_state_t state) {
-//     return update_tri_layer_state(state, _NUM, _NAV, _FUN);
-// }
+layer_state_t layer_state_set_user(layer_state_t state) {
+    state = update_tri_layer_state(state, _NUM, _NAV, _FUN);
+    state = update_tri_layer_state(state, _NAV, _NUM, _FUN);
+    return state;
+}
