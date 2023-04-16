@@ -31,9 +31,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                               ),
 
   [_FUN] = LAYOUT_split_3x5_2(
-                              KC_TRNS, KC_VOLD, KC_MUTE, KC_VOLU, KC_LPRN,        KC_RPRN, KC_F7,      KC_F8,      KC_F9,      KC_BSPC,
-                              OS_CTRL, OS_ALT,  OS_CMD,  OS_SHFT, KC_LCBR,        KC_RCBR, LCTL(KC_C), LCTL(KC_D), LCTL(KC_R), LCTL(KC_B),
-                              KC_COLN, KC_F14,  KC_MPLY, KC_F15,  KC_LBRC,        KC_RBRC, KC_F1,      KC_NO,      KC_NO,      KC_ENT,
+                              KC_TRNS, KC_VOLD, KC_MUTE, KC_VOLU, KC_LPRN,        KC_RPRN, KC_F7,  KC_F8, KC_F9, KC_F10,
+                              OS_CTRL, OS_ALT,  OS_CMD,  OS_SHFT, KC_LCBR,        KC_RCBR, KC_F4,  KC_F5, KC_F6, KC_F11,
+                              KC_COLN, KC_F14,  KC_MPLY, KC_F15,  KC_LBRC,        KC_RBRC, KC_F1,  KC_F2, KC_F3, KC_F12,
                                                          KC_TRNS, KC_TRNS,        KC_SPC,  KC_TRNS
                               )
 };
