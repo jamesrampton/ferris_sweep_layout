@@ -12,22 +12,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                               KC_Q, KC_Y,    KC_O,   KC_U, KC_X,                  KC_G,   KC_C, KC_M, KC_N, KC_Z,
                               KC_H, KC_I,    KC_E,   KC_A, KC_SLSH,               KC_D,   KC_S, KC_T, KC_R, KC_B,
                               KC_J, KC_COMM, KC_DOT, KC_K, KC_QUOT,               KC_W,   KC_F, KC_L, KC_P, KC_V,
-                                                NAV, OSM(MOD_LSFT),               KC_SPC, NUM
+                                                     NAV,  OSM(MOD_LSFT),         KC_SPC, NUM
                               ),
 
 
   [_NUM] = LAYOUT_split_3x5_2(
-                              KC_LT,   KC_7, KC_8, KC_9,    KC_GT,                LCTL(KC_R),   GBPD,         PMIN,        KC_DEL,  KC_BSPC,
-                              KC_SCLN, KC_4, KC_5, KC_6,    KC_EQL,               LCTL(KC_C),   OS_SHFT,      OS_CMD,      OS_ALT,  OS_CTRL,
-                              KC_GRV,  KC_1, KC_2, KC_3,    KC_MINS,              LCTL(KC_B),   LCTL(KC_P),   LCTL(KC_N),  KC_BSLS, KC_ENT,
-                                                   KC_TRNS, KC_0,                 KC_SPC,       KC_TRNS
+                              KC_LT,   KC_7, KC_8, KC_9,    KC_GT,                LCTL(KC_R), GBPD,       LCTL(KC_B), KC_DEL,  KC_BSPC,
+                              KC_SCLN, KC_4, KC_5, KC_6,    KC_EQL,               LCTL(KC_C), OS_SHFT,    OS_CMD,     OS_ALT,  OS_CTRL,
+                              KC_GRV,  KC_1, KC_2, KC_3,    KC_MINS,              KC_NO,      LCTL(KC_P), LCTL(KC_N), KC_BSLS, KC_ENT,
+                                                   KC_TRNS, KC_0,                 KC_SPC,     KC_TRNS
                               ),
 
   [_NAV] = LAYOUT_split_3x5_2(
-                              SW_APP,  KC_ESC,  TAB_L,  TAB_R,   KC_TAB,          KC_HOME,       KC_PGDN, KC_PGUP, KC_END,  KC_BSPC,
-                              OS_CTRL, OS_ALT,  OS_CMD, OS_SHFT, LSFT(KC_TAB),    KC_LEFT,       KC_DOWN, KC_UP,   KC_RGHT, KC_MEH,
-                              M_UNDO,  M_CUT,   M_COPY, M_PSTE,  KC_NO,           LSFT(KC_MINS), BR_BCK,  BR_FWD,  KC_NO,   KC_ENT,
-                                                        KC_TRNS, KC_TRNS,         LAU,           KC_TRNS
+                              SW_APP,  KC_ESC, TAB_L,  TAB_R,   KC_TAB,           KC_HOME,       KC_PGDN, KC_PGUP, KC_END,  KC_BSPC,
+                              OS_CTRL, OS_ALT, OS_CMD, OS_SHFT, LSFT(KC_TAB),     KC_LEFT,       KC_DOWN, KC_UP,   KC_RGHT, KC_MEH,
+                              M_UNDO,  M_CUT,  M_COPY, M_PSTE,  KC_NO,            LSFT(KC_MINS), BR_BCK,  BR_FWD,  KC_NO,   KC_ENT,
+                                                       KC_TRNS, KC_TRNS,          LAU,           KC_TRNS
                               ),
 
   [_FUN] = LAYOUT_split_3x5_2(
