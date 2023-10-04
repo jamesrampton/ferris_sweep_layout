@@ -24,10 +24,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                               ),
 
   [_NAV] = LAYOUT_split_3x5_2(
-                              LCTL(KC_F3),  KC_ESC, TAB_L,  TAB_R,   KC_TAB,           KC_LPRN,       KC_LBRC, KC_RBRC, KC_RPRN, KC_BSPC,
-                              OS_CTRL,      OS_ALT, OS_CMD, OS_SHFT, LSFT(KC_TAB),     KC_LEFT,       KC_DOWN, KC_UP,   KC_RGHT, KC_MEH,
-                              M_UNDO,       M_CUT,  M_COPY, M_PSTE,  KC_NO,            LALT(KC_BSPC), BR_BCK,  BR_FWD,  KC_HOME, KC_END,
-                                                            KC_TRNS, KC_TRNS,          LAU,           KC_TRNS
+                              LCTL(KC_F3), KC_ESC,       TAB_L,  TAB_R,   KC_NO,     KC_LPRN,       KC_LBRC, KC_RBRC, KC_RPRN, KC_BSPC,
+                              OS_CTRL,     OS_ALT,       OS_CMD, OS_SHFT, KC_NO,     KC_LEFT,       KC_DOWN, KC_UP,   KC_RGHT, KC_MEH,
+                              KC_TAB,      LSFT(KC_TAB), M_COPY, M_PSTE,  KC_NO,     LALT(KC_BSPC), BR_BCK,  BR_FWD,  KC_HOME, KC_END,
+                                                                 KC_TRNS, KC_TRNS,   LAU,           KC_TRNS
                               ),
 
   [_FUN] = LAYOUT_split_3x5_2(
